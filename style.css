@@ -1,0 +1,39 @@
+body {
+  max-width: 1000px;
+  background: black;
+  margin: 50px auto;
+}
+
+.game-board {
+  width: 900px;
+  height: 600px;
+  background: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.col {
+  border: 5px solid black;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+
+#disk-1 {
+  height: 25px;
+  width: 100px;
+  background: red;
+}
+
+#disk-2 {
+  height: 25px;
+  width: 200px;
+  background: blue;
+}
+
+#disk-3 {
+  height: 25px;
+  width: 300px;
+  background: green;
+}
