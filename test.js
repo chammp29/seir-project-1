@@ -1,7 +1,11 @@
 const columns = document.querySelectorAll(".col");
-// const diskOne = document.getElementById("disk-1");
-// const diskTwo = document.getElementById("disk-2");
-// const diskThree = document.getElementById("disk-3");
+const diskOne = document.getElementById("disk-1");
+const diskTwo = document.getElementById("disk-2");
+const diskThree = document.getElementById("disk-3");
+const diskArray = [diskOne, diskTwo, diskThree];
+for (disk of diskArray) {
+  disk.addEventListener("mousedown", setDraggable);
+}
 let targetDisk;
 
 // Loop through columns and add "drop" event listeners"
@@ -12,6 +16,24 @@ for (const col of columns) {
   col.addEventListener("dragenter", dragEnter);
   col.addEventListener("dragleave", dragLeave);
   col.addEventListener("drop", dragDrop);
+}
+
+function setDraggable(evt) {
+  // testing evt
+  console.log(evt);
+  console.log(evt.path[0].clientWidth);
+
+  // if evt has a previousSibling, then compare sizes
+  if (evt.target.previousElementSibling !== null) {
+    if (
+      evt.path[0].clientWidth > evt.target.previousElementSibling.clientWidth
+    ) {
+      console.log("too big");
+      this.setAttribute("draggable", false);
+    }
+  } else {
+    this.setAttribute("draggable", true);
+  }
 }
 
 function dragStart(evt) {
