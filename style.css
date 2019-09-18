@@ -22,18 +22,18 @@ body {
 
 #disk-1 {
   height: 25px;
-  width: 100px;
+  width: 75px;
   background: red;
 }
 
 #disk-2 {
   height: 25px;
-  width: 200px;
+  width: 150px;
   background: blue;
 }
 
 #disk-3 {
   height: 25px;
-  width: 300px;
+  width: 250px;
   background: green;
 }
