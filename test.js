@@ -60,11 +60,17 @@ function dragDrop(evt) {
   if (evt.path[0].childElementCount > 0) {
     if (compare(this.children)) {
       this.insertBefore(targetDisk, this.children[0]);
+
+      // Increment move counter
+      incrementMoveCtr();
     } else {
       alert("You can't put a larger disk on top of a smaller disk.");
     }
   } else {
     this.insertBefore(targetDisk, this.children[0]);
+
+    // Increment move counter
+    incrementMoveCtr();
   }
 }
 
@@ -82,6 +88,7 @@ function checkWin(evt) {
   if (evt.path[1].childElementCount === 3) {
     setNonDraggable();
     playAgain();
+    resetMoveCtr();
   }
 }
 
@@ -122,6 +129,15 @@ function gameStart() {
     col.addEventListener("dragleave", dragLeave);
     col.addEventListener("drop", dragDrop);
   }
+}
+
+function incrementMoveCtr() {
+  moveCounter += 1;
+  console.log(moveCounter);
+}
+
+function resetMoveCtr() {
+  moveCounter = 0;
 }
 
 // Start the game
