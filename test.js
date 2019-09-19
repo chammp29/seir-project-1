@@ -164,6 +164,7 @@ function restartGame() {
 
 // Function to increase disk count
 function increaseLevel() {
+  decreaseBtn.removeAttribute("disabled");
   if (diskCount < 5) {
     restartGame();
     diskCount += 1;
@@ -181,6 +182,7 @@ function increaseLevel() {
 
 // Function to decrease disk count
 function decreaseLevel() {
+  increaseBtn.removeAttribute("disabled");
   if (diskCount > 3) {
     restartGame();
     diskCount -= 1;
