@@ -12,11 +12,42 @@
     />
   </head>
   <body>
+    <div class="about-div">
+      <button type="button" class="modal-button" id="openModal">
+        About the Game
+      </button>
+    </div>
+    <div id="modal">
+      <div id="modal-textbox">
+        <h1>Learn to Play Tower of Hanoi</h1>
+        <p>
+          The objective of this puzzle is to move the entire stack of disks to
+          another column, obeying the following simple rules:
+        </p>
+        <ol>
+          <li>Only one disk can be moved at a time.</li>
+          <li>
+            Each move consists of taking the upper disk from one of the stacks
+            and placing it on top of another stack or in an empty column.
+          </li>
+          <li>No larger disk may be placed on top of a smaller disk.</li>
+        </ol>
+        <div class="modal-footer">
+          <button class="modal-button" id="close" href="#">Close</button>
+        </div>
+      </div>
+    </div>
     <div class="title"><h1>Tower of Hanoi</h1></div>
     <div class="controls">
-      <button type="button" id="next"><span>Next Level</span></button>
-      <div class="moves">Moves: 0</div>
-      <button type="button" id="restart">Restart</button>
+      <button type="button" class="button" id="next">
+        <span>Next Level</span>
+      </button>
+      <div class="labels">
+        <div class="disk-level">Disks: 3</div>
+        <div class="moves">Moves: 0</div>
+      </div>
+
+      <button type="button" class="button" id="restart">Restart</button>
     </div>
     <div class="game-board">
       <div class="col" id="col-1">
@@ -29,5 +60,6 @@
     </div>
 
     <script src="test.js"></script>
+    <script src="modal.js"></script>
   </body>
 </html>

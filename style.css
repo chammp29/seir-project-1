@@ -4,6 +4,55 @@ body {
   margin: auto;
 }
 
+/* .info-button {
+  margin: 10px;
+  padding: 5px;
+  border-radius: 5px;
+} */
+
+#modal {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  overflow: auto;
+  display: none;
+}
+
+#modal h1 {
+  padding-bottom: 15px;
+}
+
+#modal-textbox {
+  background-color: white;
+  height: 350px;
+  width: 550px;
+  border-radius: 2px;
+  margin: 150px auto;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  padding: 2%;
+  line-height: 120%;
+}
+
+.modal-button {
+  padding: 14px 18px;
+  background-color: #f4511e;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  color: white;
+  font-family: "Chilanka", cursive;
+  cursor: pointer;
+  margin: 25px;
+}
+
+.modal-footer {
+  text-align: right;
+}
+
 .title {
   text-align: center;
   margin: 50px auto;
@@ -11,6 +60,18 @@ body {
 
 h1 {
   font-family: "Chilanka", cursive;
+}
+
+p {
+  font-family: "Chilanka", cursive;
+}
+
+ol {
+  font-family: "Chilanka", cursive;
+}
+
+li {
+  padding: 5px;
 }
 
 .controls {
@@ -22,9 +83,9 @@ h1 {
 }
 
 /* button hover styling researched from w3schools */
-button {
-  /* -webkit-transition-duration: 0.4s;
-  transition-duration: 0.4s; */
+.button {
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
   display: inline-block;
   font-family: "Chilanka", cursive;
   width: 150px;
@@ -40,14 +101,14 @@ button {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-button span {
+/* .button span {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
 
-button span:after {
+.button span:after {
   content: "4";
   position: absolute;
   opacity: 0;
@@ -56,21 +117,33 @@ button span:after {
   transition: 0.5s;
 }
 
-button:hover span {
+.button:hover span {
   padding-right: 25px;
 }
 
-button:hover span:after {
+.button:hover span:after {
   opacity: 1;
   right: 0;
-}
-
-/* button:hover {
-  background-color: salmon;
-  color: white;
 } */
 
+button:hover {
+  background-color: salmon;
+  color: white;
+}
+
+/* remove the blue focused border */
+button:focus {
+  outline: 0;
+}
+
 .moves {
+  font-size: 24px;
+  text-align: center;
+  font-family: "Chilanka", cursive;
+  padding: 10px;
+}
+
+.disk-level {
   font-size: 24px;
   text-align: center;
   font-family: "Chilanka", cursive;
@@ -112,6 +185,22 @@ button:hover span:after {
 .d-3 {
   height: 35px;
   width: 200px;
+  background-image: linear-gradient(130deg, #fc4a1a, #f7b733);
+  border-radius: 24px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.d-4 {
+  height: 35px;
+  width: 250px;
+  background-image: linear-gradient(130deg, #fc4a1a, #f7b733);
+  border-radius: 24px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.d-5 {
+  height: 35px;
+  width: 300px;
   background-image: linear-gradient(130deg, #fc4a1a, #f7b733);
   border-radius: 24px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);

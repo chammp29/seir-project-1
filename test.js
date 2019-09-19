@@ -3,10 +3,22 @@ const columns = document.querySelectorAll(".col");
 const diskOne = document.getElementById("disk-1");
 const diskTwo = document.getElementById("disk-2");
 const diskThree = document.getElementById("disk-3");
-const diskArray = [diskOne, diskTwo, diskThree];
+//create an array of disks
+let diskArray = [];
+// const diskArray = [diskOne, diskTwo, diskThree];
+
+const levelDisplay = document.querySelector(".disk-level");
+const movesDisplay = document.querySelector(".moves");
+const restartBtn = document.getElementById("restart");
+const nextBtn = document.getElementById("next");
 let targetDisk;
+// let diskCount = 3;
 let moveCounter = 0;
 let winCounter = 0;
+
+// Add event listeners to next and restart
+restartBtn.addEventListener("click", restartGame);
+nextBtn.addEventListener("click", nextLevel);
 
 function setDraggable(evt) {
   // testing evt
@@ -85,7 +97,7 @@ function compare(childrenArray) {
 
 // Check for a win
 function checkWin(evt) {
-  if (evt.path[1].childElementCount === 3) {
+  if (evt.path[1].childElementCount === diskArray.length) {
     setNonDraggable();
     playAgain();
     resetMoveCtr();
@@ -116,6 +128,10 @@ function playAgain() {
 }
 
 function gameStart() {
+  // Fill the diskArray
+  diskArray = document.querySelectorAll(".disk");
+  levelDisplay.innerText = `Disks: ${diskArray.length}`;
+
   // Loop through diskArray and add event listener
   for (disk of diskArray) {
     disk.addEventListener("mousedown", setDraggable);
@@ -131,13 +147,35 @@ function gameStart() {
   }
 }
 
+// Function to restart the game
+function restartGame() {
+  // Reset the moves count
+  resetMoveCtr();
+
+  // Put the disks back into the first column
+  for (let disk of diskArray) {
+    columns[0].append(disk);
+  }
+}
+
+// Function to move to next level
+function nextLevel() {
+  let newDisk = document.createElement("div");
+  newDisk.classList.add("disk");
+  newDisk.classList.add("d-4");
+  columns[0].append(newDisk);
+
+  gameStart();
+}
+
 function incrementMoveCtr() {
   moveCounter += 1;
-  console.log(moveCounter);
+  movesDisplay.innerText = `Moves: ${moveCounter}`;
 }
 
 function resetMoveCtr() {
   moveCounter = 0;
+  movesDisplay.innerText = `Moves: ${moveCounter}`;
 }
 
 // Start the game
