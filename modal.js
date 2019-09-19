@@ -1,27 +1,27 @@
 // Grabbing About the Game button
-const openBtn = document.getElementById("openModal");
+const openBtn = document.getElementById("open-about-modal");
 
 // Grabbing modal element
-const modal = document.getElementById("modal");
+const aboutModal = document.getElementById("about-modal");
 
 // Grabbing close button
-const close = document.getElementById("close");
+const closeAboutModal = document.getElementById("close-about-modal");
 
 // Function to change modal display to 'block'
-const openModal = () => {
-  modal.style.display = "block";
+const openAboutModal = () => {
+  aboutModal.style.display = "block";
 };
 
 // Event handler to close the modal
 const closeModal = () => {
-  modal.style.display = "none";
+  aboutModal.style.display = "none";
 };
 
 //Add event listener to About the Game button
-openBtn.addEventListener("click", openModal);
+openBtn.addEventListener("click", openAboutModal);
 
 //Add event listener to Close button
-close.addEventListener("click", closeModal);
+closeAboutModal.addEventListener("click", closeModal);
 
 // Automaticaly popup modal after 2 seconds of page load
 // setTimeout(openModal, 2000);

@@ -23,6 +23,13 @@ restartBtn.addEventListener("click", restartGame);
 decreaseBtn.addEventListener("click", decreaseLevel);
 increaseBtn.addEventListener("click", increaseLevel);
 
+const gameModal = document.getElementById("win-game-modal");
+const closeGameModal = document.getElementById("close-game-modal");
+closeGameModal.addEventListener("click", closeWinGame);
+function closeWinGame() {
+  gameModal.style.display = "none";
+}
+
 function setDraggable(evt) {
   // testing evt
   //   console.log(evt);
@@ -118,17 +125,18 @@ function setNonDraggable() {
 }
 
 function playAgain() {
-  let userAction = prompt(
-    "You've won the game! Would you like to play again?",
-    "Yes or No?"
-  );
+  gameModal.style.display = "block";
+  //   let userAction = prompt(
+  //     "You've won the game! Would you like to play again?",
+  //     "Yes or No?"
+  //   );
 
-  if (userAction === "yes") {
-    gameStart();
-    alert("Great! Now try going the opposite direction!");
-  } else {
-    alert("Goodbye");
-  }
+  //   if (userAction === "yes") {
+  //     gameStart();
+  //     alert("Great! Now try going the opposite direction!");
+  //   } else {
+  //     alert("Goodbye");
+  //   }
 }
 
 function gameStart() {

@@ -4,7 +4,8 @@ body {
   margin: auto;
 }
 
-#modal {
+/* #about-modal */
+.modal {
   background-color: rgba(0, 0, 0, 0.4);
   position: fixed;
   top: 0;
@@ -16,11 +17,12 @@ body {
   display: none;
 }
 
-#modal h1 {
+.modal h1 {
   padding-bottom: 15px;
 }
 
-#modal-textbox {
+/* #about-modal-textbox */
+.modal-textbox {
   background-color: white;
   height: 350px;
   width: 550px;

@@ -13,12 +13,14 @@
   </head>
   <body>
     <div class="about-div">
-      <button type="button" class="modal-button" id="openModal">
+      <button type="button" class="modal-button" id="open-about-modal">
         About the Game
       </button>
     </div>
-    <div id="modal">
-      <div id="modal-textbox">
+
+    <!-- start of about-modal -->
+    <div class="modal" id="about-modal">
+      <div class="modal-textbox" id="about-modal-textbox">
         <h1>Learn to Play Tower of Hanoi</h1>
         <p>
           The objective of this puzzle is to move the entire stack of disks to
@@ -33,10 +35,27 @@
           <li>No larger disk may be placed on top of a smaller disk.</li>
         </ol>
         <div class="modal-footer">
-          <button class="modal-button" id="close" href="#">Close</button>
+          <button class="modal-button" id="close-about-modal">
+            Close
+          </button>
         </div>
       </div>
     </div>
+    <!-- end of about modal -->
+
+    <!-- start of win-game-modal -->
+    <div class="modal" id="win-game-modal">
+      <div class="modal-textbox" id="about-modal-textbox">
+        <h1>You won the game!</h1>
+        <p>The minimum amount of moves for this level is 7</p>
+        <p>The next level will have 4 discs</p>
+        <div class="modal-footer">
+          <button class="modal-button" id="close-game-modal">Ok</button>
+        </div>
+      </div>
+    </div>
+    <!-- end of win-game-modal -->
+
     <div class="title"><h1>Tower of Hanoi</h1></div>
     <div class="controls">
       <div class="labels" id="moves">Moves: 0</div>
