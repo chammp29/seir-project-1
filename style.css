@@ -4,12 +4,6 @@ body {
   margin: auto;
 }
 
-/* .info-button {
-  margin: 10px;
-  padding: 5px;
-  border-radius: 5px;
-} */
-
 #modal {
   background-color: rgba(0, 0, 0, 0.4);
   position: fixed;
@@ -42,7 +36,7 @@ body {
   background-color: #f4511e;
   border: none;
   outline: none;
-  border-radius: 3px;
+  border-radius: 12px;
   color: white;
   font-family: "Chilanka", cursive;
   cursor: pointer;
@@ -88,7 +82,7 @@ li {
   transition-duration: 0.4s;
   display: inline-block;
   font-family: "Chilanka", cursive;
-  width: 150px;
+  /* width: 150px; */
   background-color: #f4511e;
   color: #ffffff;
   text-align: center;
@@ -136,7 +130,7 @@ button:focus {
   outline: 0;
 }
 
-.moves {
+.labels {
   font-size: 24px;
   text-align: center;
   font-family: "Chilanka", cursive;
@@ -176,7 +170,7 @@ button:focus {
 
 .d-2 {
   height: 35px;
-  width: 150px;
+  width: 125px;
   background-image: linear-gradient(130deg, #373b44, #4286f4);
   border-radius: 24px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -184,7 +178,7 @@ button:focus {
 
 .d-3 {
   height: 35px;
-  width: 200px;
+  width: 175px;
   background-image: linear-gradient(130deg, #fc4a1a, #f7b733);
   border-radius: 24px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -192,7 +186,7 @@ button:focus {
 
 .d-4 {
   height: 35px;
-  width: 250px;
+  width: 225px;
   background-image: linear-gradient(130deg, #fc4a1a, #f7b733);
   border-radius: 24px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -200,7 +194,7 @@ button:focus {
 
 .d-5 {
   height: 35px;
-  width: 300px;
+  width: 250px;
   background-image: linear-gradient(130deg, #fc4a1a, #f7b733);
   border-radius: 24px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);

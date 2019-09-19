@@ -8,17 +8,20 @@ let diskArray = [];
 // const diskArray = [diskOne, diskTwo, diskThree];
 
 const levelDisplay = document.querySelector(".disk-level");
-const movesDisplay = document.querySelector(".moves");
+const movesDisplay = document.querySelector("#moves");
 const restartBtn = document.getElementById("restart");
-const nextBtn = document.getElementById("next");
+const decreaseBtn = document.getElementById("level-decrease");
+const increaseBtn = document.getElementById("level-increase");
 let targetDisk;
-// let diskCount = 3;
+// let gameInProgress = false;
+let diskCount = 3;
 let moveCounter = 0;
 let winCounter = 0;
 
 // Add event listeners to next and restart
 restartBtn.addEventListener("click", restartGame);
-nextBtn.addEventListener("click", nextLevel);
+decreaseBtn.addEventListener("click", decreaseLevel);
+increaseBtn.addEventListener("click", increaseLevel);
 
 function setDraggable(evt) {
   // testing evt
@@ -45,6 +48,7 @@ function setDraggable(evt) {
 function dragStart(evt) {
   //   console.log(evt);
   targetDisk = evt.target;
+  //   gameInProgress = true;
   //   console.log(targetDisk);
 }
 
@@ -158,14 +162,33 @@ function restartGame() {
   }
 }
 
-// Function to move to next level
-function nextLevel() {
-  let newDisk = document.createElement("div");
-  newDisk.classList.add("disk");
-  newDisk.classList.add("d-4");
-  columns[0].append(newDisk);
+// Function to increase disk count
+function increaseLevel() {
+  if (diskCount < 5) {
+    restartGame();
+    diskCount += 1;
 
-  gameStart();
+    let newDisk = document.createElement("div");
+    newDisk.classList.add("disk");
+    newDisk.classList.add(`d-${diskCount}`);
+    columns[0].append(newDisk);
+
+    gameStart();
+  } else {
+    increaseBtn.setAttribute("disabled", true);
+  }
+}
+
+// Function to decrease disk count
+function decreaseLevel() {
+  if (diskCount > 3) {
+    restartGame();
+    diskCount -= 1;
+    columns[0].removeChild(columns[0].lastChild);
+    gameStart();
+  } else {
+    decreaseBtn.setAttribute("disabled", true);
+  }
 }
 
 function incrementMoveCtr() {
