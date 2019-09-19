@@ -1,39 +1,118 @@
 body {
-  max-width: 1000px;
-  background: black;
+  max-width: 800px;
+  background: white;
+  margin: auto;
+}
+
+.title {
+  text-align: center;
   margin: 50px auto;
 }
 
+h1 {
+  font-family: "Chilanka", cursive;
+}
+
+.controls {
+  width: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 15px;
+}
+
+/* button hover styling researched from w3schools */
+button {
+  /* -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s; */
+  display: inline-block;
+  font-family: "Chilanka", cursive;
+  width: 150px;
+  background-color: #f4511e;
+  color: #ffffff;
+  text-align: center;
+  border: none;
+  transition: all 0.5s;
+  cursor: pointer;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+button span:after {
+  content: "4";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+button:hover span {
+  padding-right: 25px;
+}
+
+button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* button:hover {
+  background-color: salmon;
+  color: white;
+} */
+
+.moves {
+  font-size: 24px;
+  text-align: center;
+  font-family: "Chilanka", cursive;
+}
+
 .game-board {
-  width: 900px;
-  height: 600px;
+  width: 800px;
+  height: 400px;
   background: white;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
 .col {
-  border: 5px solid black;
+  border: 2px solid black;
+  overflow: hidden;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
 }
 
-#disk-1 {
-  height: 25px;
+.d-1 {
+  height: 35px;
   width: 75px;
-  background: red;
+  background-image: linear-gradient(130deg, #ed213a, #93291e);
+  border-radius: 24px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-#disk-2 {
-  height: 25px;
+.d-2 {
+  height: 35px;
   width: 150px;
-  background: blue;
+  background-image: linear-gradient(130deg, #373b44, #4286f4);
+  border-radius: 24px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-#disk-3 {
-  height: 25px;
-  width: 250px;
-  background: green;
+.d-3 {
+  height: 35px;
+  width: 200px;
+  background-image: linear-gradient(130deg, #fc4a1a, #f7b733);
+  border-radius: 24px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

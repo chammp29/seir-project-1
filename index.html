@@ -6,13 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
     <link href="style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Chilanka&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <div class="title"><h1>Tower of Hanoi</h1></div>
+    <div class="controls">
+      <button type="button" id="next"><span>Next Level</span></button>
+      <div class="moves">Moves: 0</div>
+      <button type="button" id="restart">Restart</button>
+    </div>
     <div class="game-board">
       <div class="col" id="col-1">
-        <div id="disk-1" draggable="false"></div>
-        <div id="disk-2" draggable="false"></div>
-        <div id="disk-3" draggable="false"></div>
+        <div class="disk d-1" id="disk-1" draggable="false"></div>
+        <div class="disk d-2" id="disk-2" draggable="false"></div>
+        <div class="disk d-3" id="disk-3" draggable="false"></div>
       </div>
       <div class="col" id="col-2"></div>
       <div class="col" id="col-3"></div>
