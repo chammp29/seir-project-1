@@ -23,8 +23,13 @@ restartBtn.addEventListener("click", restartGame);
 decreaseBtn.addEventListener("click", decreaseLevel);
 increaseBtn.addEventListener("click", increaseLevel);
 
+// Game Win modal data structures
 const gameModal = document.getElementById("win-game-modal");
 const closeGameModal = document.getElementById("close-game-modal");
+let userMoves = document.getElementById("user-moves");
+let minMoves = document.getElementById("min-moves");
+let nextLevel = document.getElementById("next-level");
+// Function to close the Game Win modal
 closeGameModal.addEventListener("click", closeWinGame);
 function closeWinGame() {
   gameModal.style.display = "none";
@@ -109,9 +114,9 @@ function compare(childrenArray) {
 // Check for a win
 function checkWin(evt) {
   if (evt.path[1].childElementCount === diskArray.length) {
-    setNonDraggable();
+    // setNonDraggable();
     playAgain();
-    resetMoveCtr();
+    restartGame();
   }
 }
 
@@ -125,7 +130,11 @@ function setNonDraggable() {
 }
 
 function playAgain() {
+  userMoves.innerText = moveCounter;
+  increaseLevel();
+  nextLevel.innerText = diskCount;
   gameModal.style.display = "block";
+
   //   let userAction = prompt(
   //     "You've won the game! Would you like to play again?",
   //     "Yes or No?"

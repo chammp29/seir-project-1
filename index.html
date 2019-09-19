@@ -46,9 +46,14 @@
     <!-- start of win-game-modal -->
     <div class="modal" id="win-game-modal">
       <div class="modal-textbox" id="about-modal-textbox">
-        <h1>You won the game!</h1>
-        <p>The minimum amount of moves for this level is 7</p>
-        <p>The next level will have 4 discs</p>
+        <h1 id="win-title">
+          You won the game in <span id="user-moves"></span> moves!
+        </h1>
+        <!-- <p>
+          The minimum amount of moves for this level is
+          <span id="min-moves"></span>
+        </p> -->
+        <p>The next level will have <span id="next-level"></span>discs</p>
         <div class="modal-footer">
           <button class="modal-button" id="close-game-modal">Ok</button>
         </div>
