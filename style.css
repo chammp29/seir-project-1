@@ -165,7 +165,7 @@ button:focus {
 .d-1 {
   height: 35px;
   width: 75px;
-  background-image: linear-gradient(130deg, #ed213a, #93291e);
+  background-image: linear-gradient(90deg, #ed213a, #93291e, #ed213a);
   border-radius: 24px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -173,7 +173,7 @@ button:focus {
 .d-2 {
   height: 35px;
   width: 125px;
-  background-image: linear-gradient(130deg, #373b44, #4286f4);
+  background-image: linear-gradient(90deg, #373b44, #4286f4, #373b44);
   border-radius: 24px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -181,7 +181,7 @@ button:focus {
 .d-3 {
   height: 35px;
   width: 175px;
-  background-image: linear-gradient(130deg, #fc4a1a, #f7b733);
+  background-image: linear-gradient(90deg, #fc4a1a, #f7b733, #fc4a1a);
   border-radius: 24px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -189,7 +189,7 @@ button:focus {
 .d-4 {
   height: 35px;
   width: 225px;
-  background-image: linear-gradient(130deg, #fc4a1a, #f7b733);
+  background-image: linear-gradient(90deg, #fc4a1a, #f7b733, #fc4a1a);
   border-radius: 24px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -197,7 +197,7 @@ button:focus {
 .d-5 {
   height: 35px;
   width: 250px;
-  background-image: linear-gradient(130deg, #fc4a1a, #f7b733);
+  background-image: linear-gradient(90deg, #fc4a1a, #f7b733, #fc4a1a);
   border-radius: 24px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
