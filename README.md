@@ -1,6 +1,6 @@
 # seir-project-1
 
-#SEIR-Project-1: Tower of Hanoi
+# SEIR-Project-1: Tower of Hanoi
 
 This project simulates a Tower of Hanoi game in which the user can play this traditional game in various difficulties.
 
