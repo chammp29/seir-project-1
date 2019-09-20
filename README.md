@@ -6,6 +6,8 @@ This project simulates a Tower of Hanoi game in which the user can play this tra
 
 User can play a typical game of Tower of Hanoi by moving the disks to another column.
 All rules and game logic are in place.
+User can change the level on demand, and upon successful completion of a level, the next level begins
+User can reset the current state of the game at any time
 
 ## Technologies Used
 

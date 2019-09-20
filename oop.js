@@ -1,3 +1,5 @@
+// This was a rough sketch of how I would solve this problem using a game object. I decided to start simpler than this and never was able to revisit this idea in the project timeframe
+
 const game = {
   diskOne: document.getElementById("disk-1"),
   diskTwo: document.getElementById("disk-2"),

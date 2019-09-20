@@ -13,7 +13,7 @@
   </head>
   <body>
     <div class="about-div">
-      <button type="button" class="modal-button" id="open-about-modal">
+      <button type="button" class="button modal-button" id="open-about-modal">
         About the Game
       </button>
     </div>
@@ -53,7 +53,7 @@
           The minimum amount of moves for this level is
           <span id="min-moves"></span>
         </p> -->
-        <p>The next level will have <span id="next-level"></span>discs</p>
+        <p>The next level will have <span id="next-level"></span> discs</p>
         <div class="modal-footer">
           <button class="modal-button" id="close-game-modal">Ok</button>
         </div>
@@ -61,7 +61,10 @@
     </div>
     <!-- end of win-game-modal -->
 
+    <!-- game title -->
     <div class="title"><h1>Tower of Hanoi</h1></div>
+
+    <!-- control box -->
     <div class="controls">
       <div class="labels" id="moves">Moves: 0</div>
       <button type="button" class="button" id="level-decrease"><</button>
@@ -69,6 +72,8 @@
       <button type="button" class="button" id="level-increase">></button>
       <button type="button" class="button" id="restart">Restart</button>
     </div>
+
+    <!-- game board with 3 columns -->
     <div class="game-board">
       <div class="col" id="col-1">
         <div class="disk d-1" id="disk-1" draggable="false"></div>
@@ -79,7 +84,7 @@
       <div class="col" id="col-3"></div>
     </div>
 
-    <script src="test.js"></script>
+    <script src="app.js"></script>
     <script src="modal.js"></script>
   </body>
 </html>
