@@ -91,7 +91,7 @@ function setDraggable(evt) {
       this.setAttribute("draggable", false);
     }
   } else {
-    // allow "this" to be drabbable
+    // allow "this" to be draggable
     this.setAttribute("draggable", true);
   }
 }
@@ -121,7 +121,7 @@ function checkWin(evt) {
 function playAgain() {
   // display how many moves the user used to beat the last level
   userMoves.innerText = moveCounter;
-  // call the increaseLeve() to increase the number of disks
+  // call the increaseLevel() to increase the number of disks
   increaseLevel();
   // display the new information in the game win modal
   nextLevel.innerText = diskCount;
