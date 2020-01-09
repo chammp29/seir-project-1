@@ -2,6 +2,8 @@
 
 This project simulates a Tower of Hanoi game in which the user can play this traditional game in various difficulties.
 
+![alt text](./hanoi.jpg "Tower of Hanoi")
+
 ## Features
 
 User can play a typical game of Tower of Hanoi by moving the disks to another column.
