@@ -51,13 +51,13 @@ function dragEnter(evt) {
   evt.preventDefault();
 }
 
-// the dragend event is happening after the drop event, and the target is the disk
+// the dragEnd event is happening after the drop event, and the target is the disk
 function dragEnd(evt) {
   // on dragend, check if win condition is met
   checkWin(evt);
 }
 
-// the drop event is happening before the dragend event, and the target is the new column
+// the drop event is happening before the dragEnd event, and the target is the new column
 function dragDrop(evt) {
   // if the column has another disk in it, then run the compare function; place the disk if appropriate
   if (evt.path[0].childElementCount > 0) {
